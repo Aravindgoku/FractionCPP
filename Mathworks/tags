@@ -1,0 +1,3 @@
+Fraction	/home/aravindgoku/workspace/cpp/Mathworks/Fraction/Fraction.h	/^class Fraction$/;"	class	line:3
+Fraction	/home/aravindgoku/workspace/cpp/Mathworks/Fraction/Fraction.h	/^    Fraction();$/;"	prototype	line:6	class:Fraction	access:public	signature:()
+~Fraction	/home/aravindgoku/workspace/cpp/Mathworks/Fraction/Fraction.h	/^    ~Fraction();$/;"	prototype	line:7	class:Fraction	access:public	signature:()
