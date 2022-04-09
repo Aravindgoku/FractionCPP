@@ -1,2 +1,2 @@
 # FractionCPP
-Run the main.cpp file to test out the Fraction class implementation.
+Run the main.cpp file inside the Fraction Project folder to test out the Fraction class implementation.
