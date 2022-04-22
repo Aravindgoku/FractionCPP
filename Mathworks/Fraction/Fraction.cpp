@@ -55,12 +55,6 @@ int Fraction::getDenominator() const{
     return denominator;
 }
 
-/*void Fraction::operator=(const Fraction &rhs){
-
-    numerator = rhs.numerator;
-    denominator = rhs.denominator;
-}*/
-
 /**
  * @brief Overloaded plus operator to add two fraction objects
  * @param rhs
