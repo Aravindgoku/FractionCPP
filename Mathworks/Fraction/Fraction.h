@@ -25,7 +25,6 @@ public:
     Fraction operator-(const Fraction &rhs) const;
     Fraction operator*(const Fraction &rhs) const;
     Fraction operator/(const Fraction &rhs) const;
-    //void operator=(const Fraction &rhs);
     
     bool operator==(const Fraction &rhs) const;
     bool operator!=(const Fraction &rhs) const;
