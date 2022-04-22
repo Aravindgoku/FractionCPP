@@ -13,7 +13,7 @@ CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
 User                   :=Aravind S
-Date                   :=08/04/22
+Date                   :=22/04/22
 CodeLitePath           :=/home/aravindgoku/.codelite
 LinkerName             :=/usr/bin/g++-9
 SharedObjectLinkerName :=/usr/bin/g++-9 -shared -fPIC
@@ -60,7 +60,7 @@ AS       := /usr/bin/as
 ## User defined environment variables
 ##
 CodeLiteDir:=/usr/share/codelite
-Objects0=$(IntermediateDirectory)/Fraction.cpp$(ObjectSuffix) $(IntermediateDirectory)/main.cpp$(ObjectSuffix) 
+Objects0=$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IntermediateDirectory)/Fraction.cpp$(ObjectSuffix) 
 
 
 
@@ -91,17 +91,17 @@ PreBuild:
 ##
 ## Objects
 ##
-$(IntermediateDirectory)/Fraction.cpp$(ObjectSuffix): Fraction.cpp
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/Fraction.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/Fraction.cpp$(DependSuffix) -MM Fraction.cpp
-	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/aravindgoku/workspace/cpp/Mathworks/Fraction/Fraction.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Fraction.cpp$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/Fraction.cpp$(PreprocessSuffix): Fraction.cpp
-	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Fraction.cpp$(PreprocessSuffix) Fraction.cpp
-
 $(IntermediateDirectory)/main.cpp$(ObjectSuffix): main.cpp
 	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/main.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/main.cpp$(DependSuffix) -MM main.cpp
 	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/aravindgoku/workspace/cpp/Mathworks/Fraction/main.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/main.cpp$(PreprocessSuffix): main.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/main.cpp$(PreprocessSuffix) main.cpp
+
+$(IntermediateDirectory)/Fraction.cpp$(ObjectSuffix): Fraction.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/Fraction.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/Fraction.cpp$(DependSuffix) -MM Fraction.cpp
+	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/aravindgoku/workspace/cpp/Mathworks/Fraction/Fraction.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Fraction.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/Fraction.cpp$(PreprocessSuffix): Fraction.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Fraction.cpp$(PreprocessSuffix) Fraction.cpp
 
 
 -include $(IntermediateDirectory)/*$(DependSuffix)

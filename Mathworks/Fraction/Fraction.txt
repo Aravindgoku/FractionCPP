@@ -1,1 +1,1 @@
-Debug/Fraction.cpp.o Debug/main.cpp.o
+Debug/main.cpp.o Debug/Fraction.cpp.o
