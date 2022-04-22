@@ -63,41 +63,45 @@ void assert(int testCase, int expectedNum, int expectedDen, Fraction source){
     }
 }
 
+/**
+ * @brief Test cases for the Fraction class
+ */
 void TEST_FUNCTION(){
     std::cout<<"In Test Function..."<<std::endl;
-    
-    std::cout<<"\nTesting for Addition of Fractional numbers..."<<std::endl;
-    Fraction f1(-4, -8);
-    assert(ValueCheck, 1, 2, f1);
-    Fraction f2(2, 4);
-    assert(ValueCheck, 1, 2, f2);
+    try{    
+        std::cout<<"\nTesting for Addition of Fractional numbers..."<<std::endl;
+        Fraction f1(-4, -8);
+        assert(ValueCheck, 1, 2, f1);
+        Fraction f2(2, 4);
+        assert(ValueCheck, 1, 2, f2);
+            
+        std::cout<<"\nTesting for Addition of Fractional numbers..."<<std::endl;
+        Fraction f3;
+        f3 = f1 + f2;
+        assert(AdditionCheck, 1, 1, f3);
+        f3 = f3 - f2;
+        assert(AdditionCheck, 1, 2, f3);
         
-    std::cout<<"\nTesting for Addition of Fractional numbers..."<<std::endl;
-    Fraction f3;
-    f3 = f1 + f2;
-    assert(AdditionCheck, 1, 1, f3);
-    f3 = f3 - f2;
-    assert(AdditionCheck, 1, 2, f3);
+        std::cout<<"\nTesting for Comparison of Fractional numbers..."<<std::endl;
+        Fraction f4;
+        bool testValue = f1==f2;
+        assert(EqualityCheck, testValue);
+        f3 = f1 + f3;
+        testValue = f3 != f1;
+        assert(NonEqualityCheck, testValue);
+        f1 = f1 + f2;
+        std::cout<<"Value of f1 is: "<<f1<<std::endl;
+        testValue = f2 < f1;
+        assert(GreaterthanCheck, testValue);
+        f3 = f3 + f2;
+        testValue = f3 > f2;
+        assert(LesserthanCheck, testValue);
+        std::cout<<"Value of f3 is: "<<f3<<std::endl;
     
-    std::cout<<"\nTesting for Comparison of Fractional numbers..."<<std::endl;
-    Fraction f4;
-    bool testValue = f1==f2;
-    assert(EqualityCheck, testValue);
-    f3 = f1 + f3;
-    testValue = f3 != f1;
-    assert(NonEqualityCheck, testValue);
-    f1 = f1 + f2;
-    testValue = f2 < f1;
-    assert(GreaterthanCheck, testValue);
-    f3 = f3 + f2;
-    testValue = f3 > f2;
-    assert(LesserthanCheck, testValue);
-    f3.display();
-    
-    try{
-        Fraction f4(5,0);
-    }catch(int &ex){
-        std::cout<<"\nDivision by zero is not allowed"<<std::endl;
+        Fraction f5(5,0);
+
+    }catch(std::overflow_error &ex){
+        std::cout<<ex.what()<<std::endl;
     }
 }
 
